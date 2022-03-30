@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap");
+body {
+  margin: 0;
+  width: 100vw;
+  text-align: center;
+  color: white;
+  font-family: "Chakra Petch", sans-serif;
+  background-color: black;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  -ms-overflow-style: none;
+  scroll-behavior: smooth;
+}
+body section {
+  height: 100vh;
+}
+body section .subtitle {
+  font-weight: 100;
+  font-size: 40px;
+  color: #dfbfbf;
+  letter-spacing: 0.3em;
+  animation: glitch-2 3s 3.02s infinite;
+}
+@keyframes glitch-2 {
+  1% {
+    transform: rotateX(10deg) skewX(70deg);
+  }
+  2% {
+    transform: rotateX(0deg) skewX(0deg);
+  }
+}
+body section .text-section-title {
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 32px;
+  letter-spacing: 8px;
+  top: -52px;
+  position: relative;
+  animation: glitch-2 3s 3.02s infinite;
+}
+body .scanlines {
+  overflow: hidden;
+  mix-blend-mode: difference;
+}
+body .scanlines::before {
+  content: "";
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: repeating-linear-gradient(to bottom, transparent 0%, rgba(255, 255, 255, 0.05) 0.2%, transparent 1%);
+  animation: fudge 7s ease-in-out alternate infinite;
+}
+body .scanlines-2::before {
+  top: 100vh;
+}
+body .scanlines-3::before {
+  top: 200vh;
+}
+@keyframes fudge {
+  from {
+    transform: translate(0px, 0px);
+  }
+  to {
+    transform: translate(0px, 2%);
+  }
+}
+body #section1 {
+  color: #dfbfbf;
+}
+body #section1 .progress {
+  padding-top: 10vh;
+}
+body #section1 .circle-progress-value {
+  stroke-width: 2px;
+  stroke: white;
+  stroke-linecap: round;
+}
+body #section1 .circle-progress-circle {
+  stroke-width: 0;
+}
+body #section1 .circle-progress {
+  width: 250px;
+  height: 250px;
+  background-image: url("../assets/logo.png");
+  background-size: 200px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+body #section1 .circle-progress-text {
+  display: none;
+}
+body #section1 #logo-load {
+  padding-top: 25px;
+}
+body #section1 .glitch-container {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  padding-top: 20px;
+}
+body #section1 .glitch-container .glitch, body #section1 .glitch-container .glow {
+  font-size: 90px;
+  animation: glitch 4s 4s infinite;
+}
+body #section1 .glitch-container .glitch::after, body #section1 .glitch-container .glow::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 2px;
+  text-shadow: -0.3vw 0 lightgreen;
+  background: black;
+  overflow: hidden;
+  animation: glitch 4s 4s infinite;
+}
+body #section1 .glow {
+  text-shadow: 0 0 1000px #dfbfbf;
+  color: transparent;
+  position: absolute;
+}
+@keyframes glitch {
+  1% {
+    transform: rotateX(10deg) skewX(90deg);
+  }
+  2% {
+    transform: rotateX(0deg) skewX(0deg);
+  }
+}
+body #section1 .scrollArrow {
+  position: absolute;
+  width: 100vw;
+  cursor: pointer;
+  font-size: 40px;
+  animation: floating 3s ease-in-out infinite;
+}
+@keyframes floating {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, 15px);
+  }
+  100% {
+    transform: translate(0, 0px);
+  }
+}
+body #section1 p {
+  margin-top: 30vh;
+}
+body #section2 {
+  background-image: url("../assets/bg-venom.jpg");
+  background-size: cover;
+}
+@media screen and (max-device-width: 1400px) {
+  body #section1 .glitch-container .glitch, body #section1 .glitch-container .glow {
+    font-size: 120px;
+  }
+}
+@media screen and (max-device-width: 900px) {
+  body #section1 .glitch-container .glitch, body #section1 .glitch-container .glow {
+    font-size: 85px;
+  }
+}
+@media screen and (max-device-width: 650px) {
+  body #section1 .glitch-container .glitch, body #section1 .glitch-container .glow {
+    font-size: 60px;
+  }
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/*# sourceMappingURL=style.css.map */
