@@ -100,7 +100,6 @@ body {
         opacity: 1;
       }
     }
-
     @keyframes glitch2 {
       0% {
         transform: none;
@@ -155,7 +154,6 @@ body {
         opacity: 0.25;
       }
     }
-
     @keyframes glitch3 {
       0% {
         transform: none;
@@ -210,6 +208,38 @@ body {
         opacity: 0.25;
       }
     }
+    .contact-content {
+      width: 60vw;
+      margin: auto;
+      padding-top: 25vh;
+      text-align: center;
+      font-family: 'Real VHS Font';
+      font-size: 40px;
+      text-shadow: var(--shadow-x-distance) var(--shadow-y-distance) 0 var(--glitchy-blue),calc(var(--shadow-x-distance)*-1) calc(var(--shadow-y-distance)*-1) 0 var(--glitchy-red);
+      animation: glitch-2 3s 3.02s infinite;
+      .contact-icons {
+        a {
+          i {
+            font-size: 50px;
+          }
+          --shadow-x-distance: 2px;
+          --shadow-y-distance: 1px;
+          margin: 10px;
+          color: white;
+          text-decoration: none;
+          transition: all 0.3s ease-in-out;
+          &:hover {
+            --shadow-x-distance: 5px;
+            --shadow-y-distance: 4px;
+            text-shadow: var(--shadow-x-distance) var(--shadow-y-distance) 0 var(--glitchy-blue),calc(var(--shadow-x-distance)*-1) calc(var(--shadow-y-distance)*-1) 0 var(--glitchy-red);
+          }
+        }
+      }
+    }
+  }
+  footer {
+    bottom: 0;
+    margin-top: -40px;
   }
   .scanlines {
     overflow: hidden;
@@ -504,7 +534,6 @@ body {
       filter: hue-rotate(360deg);
     }
   }
-
   @keyframes bg-glitch2
   {
     0%
@@ -543,12 +572,41 @@ body {
         }
       }
     }
+    .project-section {
+      .project-section-content {
+        .project-description {
+          width: 85%;
+          margin-top: 5vh;
+        }
+        .right-side {
+          display: none;
+        }
+      }
+    }
+    section {
+      .contact-content {
+        .contact-icons {
+          .contact-separator2 {
+            display: none;
+          }
+        }
+      }
+    }
   }
   @media screen and (max-device-width: 650px){
     #section1 {
       .glitch-container {
         .glitch {
           font-size: 60px;
+        }
+      }
+    }
+    section {
+      .contact-content {
+        .contact-icons {
+          .contact-separator {
+            display: none;
+          }
         }
       }
     }
@@ -637,6 +695,31 @@ body {
         font-size: 30px;
         padding-left: 10%;
         padding-right: 10%;
+      }
+    }
+    .project-section {
+      .project-section-content {
+        .project-description {
+          width: 95%;
+          margin-top: 5vh;
+        }
+      }
+    }
+  }
+  @media screen and (max-device-height: 700px) and (max-device-width: 580px){
+    .project-section {
+      .project-section-content {
+        .project-description {
+          .project-logo {
+            max-width: 150px;
+          }
+          .project-name {
+            font-size: 30px;
+          }
+        }
+        .left-side {
+          display: none;
+        }
       }
     }
   }

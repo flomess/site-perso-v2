@@ -21,20 +21,16 @@ function scrollStop (callback, refresh = 1000) {
 // if user stopped scrolling
 scrollStop(function () {
     if (screen.width > 900){
-        if(document.getElementById("section1").getBoundingClientRect().bottom >= ((window.innerHeight)/2)){
-            sectionToScroll = document.getElementById('section1');
-        } else if(document.getElementById("section2").getBoundingClientRect().bottom >= ((window.innerHeight)/2)) {
-            sectionToScroll = document.getElementById('section2');
-        } else if(document.getElementById("section3").getBoundingClientRect().bottom >= ((window.innerHeight)/2)) {
-            sectionToScroll = document.getElementById('section3');
-        } else if(document.getElementById("section4").getBoundingClientRect().bottom >= ((window.innerHeight)/2)) {
-            sectionToScroll = document.getElementById('section4');
-        } else if(document.getElementById("section5").getBoundingClientRect().bottom >= ((window.innerHeight)/2)) {
-            sectionToScroll = document.getElementById('section5');
-        } else {
-            sectionToScroll = '';
-        }
-        scrollSection(sectionToScroll);
+        let sections = document.querySelectorAll('.scrollable-section');
+        let found = false;
+        sections.forEach(function (section) {
+            if (found === true) return
+            let sectionTop = section.getBoundingClientRect().bottom;
+            if (sectionTop >= ((window.innerHeight) / 2)) {
+                scrollSection(section)
+                found = true
+            }
+        });
     }
 });
 

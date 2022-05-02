@@ -208,6 +208,36 @@ body section .text-section-title {
     opacity: 0.25;
   }
 }
+body section .contact-content {
+  width: 60vw;
+  margin: auto;
+  padding-top: 25vh;
+  text-align: center;
+  font-family: "Real VHS Font";
+  font-size: 40px;
+  text-shadow: var(--shadow-x-distance) var(--shadow-y-distance) 0 var(--glitchy-blue), calc(var(--shadow-x-distance) * -1) calc(var(--shadow-y-distance) * -1) 0 var(--glitchy-red);
+  animation: glitch-2 3s 3.02s infinite;
+}
+body section .contact-content .contact-icons a {
+  --shadow-x-distance: 2px;
+  --shadow-y-distance: 1px;
+  margin: 10px;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+body section .contact-content .contact-icons a i {
+  font-size: 50px;
+}
+body section .contact-content .contact-icons a:hover {
+  --shadow-x-distance: 5px;
+  --shadow-y-distance: 4px;
+  text-shadow: var(--shadow-x-distance) var(--shadow-y-distance) 0 var(--glitchy-blue), calc(var(--shadow-x-distance) * -1) calc(var(--shadow-y-distance) * -1) 0 var(--glitchy-red);
+}
+body footer {
+  bottom: 0;
+  margin-top: -40px;
+}
 body .scanlines {
   overflow: hidden;
   mix-blend-mode: difference;
@@ -505,10 +535,23 @@ body #section5 .project-section-bg:before {
   body #section1 .glitch-container .glitch, body #section1 .glitch-container .glow {
     font-size: 85px;
   }
+  body .project-section .project-section-content .project-description {
+    width: 85%;
+    margin-top: 5vh;
+  }
+  body .project-section .project-section-content .right-side {
+    display: none;
+  }
+  body section .contact-content .contact-icons .contact-separator2 {
+    display: none;
+  }
 }
 @media screen and (max-device-width: 650px) {
   body #section1 .glitch-container .glitch, body #section1 .glitch-container .glow {
     font-size: 60px;
+  }
+  body section .contact-content .contact-icons .contact-separator {
+    display: none;
   }
 }
 @media screen and (max-device-width: 480px) {
@@ -574,6 +617,21 @@ body #section5 .project-section-bg:before {
     font-size: 30px;
     padding-left: 10%;
     padding-right: 10%;
+  }
+  body .project-section .project-section-content .project-description {
+    width: 95%;
+    margin-top: 5vh;
+  }
+}
+@media screen and (max-device-height: 700px) and (max-device-width: 580px) {
+  body .project-section .project-section-content .project-description .project-logo {
+    max-width: 150px;
+  }
+  body .project-section .project-section-content .project-description .project-name {
+    font-size: 30px;
+  }
+  body .project-section .project-section-content .left-side {
+    display: none;
   }
 }
 @media screen and (max-device-height: 700px) and (min-device-width: 640px) {
