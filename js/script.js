@@ -27,6 +27,10 @@ scrollStop(function () {
             sectionToScroll = document.getElementById('section2');
         } else if(document.getElementById("section3").getBoundingClientRect().bottom >= ((window.innerHeight)/2)) {
             sectionToScroll = document.getElementById('section3');
+        } else if(document.getElementById("section4").getBoundingClientRect().bottom >= ((window.innerHeight)/2)) {
+            sectionToScroll = document.getElementById('section4');
+        } else if(document.getElementById("section5").getBoundingClientRect().bottom >= ((window.innerHeight)/2)) {
+            sectionToScroll = document.getElementById('section5');
         } else {
             sectionToScroll = '';
         }

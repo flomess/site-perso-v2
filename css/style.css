@@ -1,5 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap");
+@font-face {
+  font-family: "Real VHS Font";
+  src: url("../assets/RealVhsFontRegular.ttf");
+}
 body {
+  --glitchy-blue: rgba(2,183,182,0.4);
+  --glitchy-red: rgba(183,2,2,0.4);
+  --shadow-x-distance: 3px;
+  --shadow-y-distance: 2px;
   margin: 0;
   width: 100vw;
   text-align: center;
@@ -37,6 +45,168 @@ body section .text-section-title {
   top: -52px;
   position: relative;
   animation: glitch-2 3s 3.02s infinite;
+}
+@keyframes glitch1 {
+  0% {
+    transform: none;
+    opacity: 1;
+  }
+  7% {
+    transform: skew(-0.5deg, -0.9deg);
+    opacity: 0.75;
+  }
+  10% {
+    transform: none;
+    opacity: 1;
+  }
+  27% {
+    transform: none;
+    opacity: 1;
+  }
+  30% {
+    transform: skew(0.8deg, -0.1deg);
+    opacity: 0.75;
+  }
+  35% {
+    transform: none;
+    opacity: 1;
+  }
+  52% {
+    transform: none;
+    opacity: 1;
+  }
+  55% {
+    transform: skew(-1deg, 0.2deg);
+    opacity: 0.75;
+  }
+  50% {
+    transform: none;
+    opacity: 1;
+  }
+  72% {
+    transform: none;
+    opacity: 1;
+  }
+  75% {
+    transform: skew(0.4deg, 1deg);
+    opacity: 0.75;
+  }
+  80% {
+    transform: none;
+    opacity: 1;
+  }
+  100% {
+    transform: none;
+    opacity: 1;
+  }
+}
+@keyframes glitch2 {
+  0% {
+    transform: none;
+    opacity: 0.25;
+  }
+  7% {
+    transform: translate(-2px, -3px);
+    opacity: 0.5;
+  }
+  10% {
+    transform: none;
+    opacity: 0.25;
+  }
+  27% {
+    transform: none;
+    opacity: 0.25;
+  }
+  30% {
+    transform: translate(-5px, -2px);
+    opacity: 0.5;
+  }
+  35% {
+    transform: none;
+    opacity: 0.25;
+  }
+  52% {
+    transform: none;
+    opacity: 0.25;
+  }
+  55% {
+    transform: translate(-5px, -1px);
+    opacity: 0.5;
+  }
+  50% {
+    transform: none;
+    opacity: 0.25;
+  }
+  72% {
+    transform: none;
+    opacity: 0.25;
+  }
+  75% {
+    transform: translate(-2px, -6px);
+    opacity: 0.5;
+  }
+  80% {
+    transform: none;
+    opacity: 0.25;
+  }
+  100% {
+    transform: none;
+    opacity: 0.25;
+  }
+}
+@keyframes glitch3 {
+  0% {
+    transform: none;
+    opacity: 0.25;
+  }
+  7% {
+    transform: translate(2px, 3px);
+    opacity: 0.5;
+  }
+  10% {
+    transform: none;
+    opacity: 0.25;
+  }
+  27% {
+    transform: none;
+    opacity: 0.25;
+  }
+  30% {
+    transform: translate(5px, 2px);
+    opacity: 0.5;
+  }
+  35% {
+    transform: none;
+    opacity: 0.25;
+  }
+  52% {
+    transform: none;
+    opacity: 0.25;
+  }
+  55% {
+    transform: translate(5px, 1px);
+    opacity: 0.5;
+  }
+  50% {
+    transform: none;
+    opacity: 0.25;
+  }
+  72% {
+    transform: none;
+    opacity: 0.25;
+  }
+  75% {
+    transform: translate(2px, 6px);
+    opacity: 0.5;
+  }
+  80% {
+    transform: none;
+    opacity: 0.25;
+  }
+  100% {
+    transform: none;
+    opacity: 0.25;
+  }
 }
 body .scanlines {
   overflow: hidden;
@@ -148,13 +318,187 @@ body #section1 .scrollArrow {
 body #section1 p {
   margin-top: 30vh;
 }
-body #section2 {
-  background-image: url("../assets/bg-venom.jpg");
-  background-size: cover;
+body .project-section {
+  font-family: "Real VHS Font";
+  font-size: 60px;
 }
-@media screen and (max-device-width: 1400px) {
-  body #section1 .glitch-container .glitch, body #section1 .glitch-container .glow {
-    font-size: 120px;
+body .project-section .project-section-content {
+  position: relative;
+  padding: 2%;
+}
+body .project-section .project-section-content .left-side {
+  float: left;
+  text-align: left;
+}
+body .project-section .project-section-content .glitch2 {
+  position: absolute;
+  color: #fff;
+  animation: glitch1 2.5s infinite;
+}
+body .project-section .project-section-content .glitch2:nth-child(2) {
+  color: #67f3da;
+  animation: glitch2 2.5s infinite;
+}
+body .project-section .project-section-content .glitch2:nth-child(3) {
+  color: #f16f6f;
+  animation: glitch3 2.5s infinite;
+}
+body .project-section .project-section-content .right-side {
+  right: 1%;
+  position: absolute;
+  writing-mode: vertical-rl;
+  height: 100vh;
+}
+body .project-section .project-section-content .project-description {
+  width: 60vw;
+  margin: auto;
+  margin-top: 15vh;
+  text-align: center;
+}
+body .project-section .project-section-content .project-description .project-logo {
+  max-width: 200px;
+}
+body .project-section .project-section-content .project-description .project-logo-large {
+  max-height: 100px;
+}
+body .project-section .project-section-content .project-description .project-name {
+  text-shadow: var(--shadow-x-distance) var(--shadow-y-distance) 0 var(--glitchy-blue), calc(var(--shadow-x-distance) * -1) calc(var(--shadow-y-distance) * -1) 0 var(--glitchy-red);
+  animation: glitch-2 3s 3.02s infinite;
+}
+body .project-section .project-section-content .project-description .project-text {
+  --shadow-x-distance: 2.5px;
+  --shadow-y-distance: 1.5px;
+  text-shadow: var(--shadow-x-distance) var(--shadow-y-distance) 0 var(--glitchy-blue), calc(var(--shadow-x-distance) * -1) calc(var(--shadow-y-distance) * -1) 0 var(--glitchy-red);
+  font-size: 20px;
+  margin-top: 30px;
+}
+body .project-section .project-section-content .project-description .project-text .project-icons {
+  margin-top: 20px;
+}
+body .project-section .project-section-content .project-description .project-link {
+  cursor: pointer;
+  border: 1px solid #fff;
+  padding: 5px;
+  font-size: 40px;
+  width: 180px;
+  margin: auto;
+  margin-top: 30px;
+  font-weight: bold;
+  transition: ease-in 0.3s;
+  text-shadow: var(--shadow-x-distance) var(--shadow-y-distance) 0 var(--glitchy-blue), calc(var(--shadow-x-distance) * -1) calc(var(--shadow-y-distance) * -1) 0 var(--glitchy-red);
+}
+body .project-section .project-section-content .project-description .project-link:hover {
+  background-color: #fff;
+  color: black;
+  mix-blend-mode: screen;
+}
+body .project-section-bg {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-position-x: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: brightness(0.2);
+}
+body .project-section-bg:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-position-x: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+  mix-blend-mode: hard-light;
+  animation: bg-glitch2 10s linear infinite;
+}
+body .project-section:hover > .project-section-bg:before {
+  animation: bg-glitch1 1s linear infinite;
+}
+body #section2 .project-section-bg {
+  background-image: url("../assets/bg-venom.jpg");
+}
+body #section2 .project-section-bg:before {
+  background-image: url("../assets/bg-venom.jpg");
+}
+body #section3 .project-section-bg {
+  background-image: url("../assets/bg-senshinomishi.png");
+}
+body #section3 .project-section-bg:before {
+  background-image: url("../assets/bg-senshinomishi.png");
+}
+body #section4 .project-section-bg {
+  background-image: url("https://groupe-krypton.com/wp-content/uploads/2021/11/pexels-pixabay-414807-scaled.jpg");
+}
+body #section4 .project-section-bg:before {
+  background-image: url("https://groupe-krypton.com/wp-content/uploads/2021/11/pexels-pixabay-414807-scaled.jpg");
+}
+body #section5 .project-section-bg {
+  background-image: url("../assets/bg-nihontsuki.png");
+}
+body #section5 .project-section-bg:before {
+  background-image: url("../assets/bg-nihontsuki.png");
+}
+@keyframes bg-glitch1 {
+  0% {
+    background-position: 0 0;
+    filter: hue-rotate(0deg);
+  }
+  10% {
+    background-position: 5px 0;
+  }
+  20% {
+    background-position: -5px 0;
+  }
+  30% {
+    background-position: 15px 0;
+  }
+  40% {
+    background-position: -5px 0;
+  }
+  50% {
+    background-position: -25px 0;
+  }
+  60% {
+    background-position: -50px 0;
+  }
+  70% {
+    background-position: 0 -20px;
+  }
+  80% {
+    background-position: -60px -20px;
+  }
+  90% {
+    background-position: -100px -20px;
+  }
+  100% {
+    background-position: 0 0;
+    filter: hue-rotate(360deg);
+  }
+}
+@keyframes bg-glitch2 {
+  0% {
+    background-position: 0 0;
+    filter: hue-rotate(0deg);
+  }
+  10% {
+    background-position: 15px 0;
+  }
+  15% {
+    background-position: -15px 0;
+  }
+  20% {
+    filter: hue-rotate(360deg);
+  }
+  25% {
+    background-position: 0 0;
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    background-position: 0 0;
+    filter: hue-rotate(0deg);
   }
 }
 @media screen and (max-device-width: 900px) {
@@ -165,6 +509,81 @@ body #section2 {
 @media screen and (max-device-width: 650px) {
   body #section1 .glitch-container .glitch, body #section1 .glitch-container .glow {
     font-size: 60px;
+  }
+}
+@media screen and (max-device-width: 480px) {
+  body #section1 .progress img {
+    width: 150px;
+    height: 150px;
+  }
+  body #section1 .circle-progress {
+    width: 200px;
+    height: 200px;
+    background-size: 150px;
+  }
+  body #section1 .glitch-container .glitch, body #section1 .glitch-container .glow {
+    font-size: 45px;
+  }
+  body #section1 .subtitle {
+    font-size: 30px;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
+@media screen and (max-device-width: 330px) {
+  body #section1 .progress img {
+    width: 100px;
+    height: 100px;
+  }
+  body #section1 .circle-progress {
+    width: 120px;
+    height: 120px;
+    background-size: 100px;
+  }
+  body #section1 .glitch-container .glitch, body #section1 .glitch-container .glow {
+    font-size: 35px;
+  }
+  body #section1 .subtitle {
+    font-size: 25px;
+  }
+}
+@media screen and (max-device-height: 1100px) and (min-device-width: 900px) and (max-device-width: 1400px) {
+  body #section1 p {
+    margin-top: 40vh;
+  }
+}
+@media screen and (max-device-height: 800px) and (min-device-width: 900px) {
+  body #section1 .glitch-container .glitch, body #section1 .glitch-container .glow {
+    font-size: 80px;
+  }
+  body #section1 p {
+    margin-top: 30vh;
+  }
+}
+@media screen and (max-device-height: 700px) {
+  body #section1 .progress img {
+    width: 150px;
+    height: 150px;
+  }
+  body #section1 .circle-progress {
+    width: 200px;
+    height: 200px;
+    background-size: 150px;
+  }
+  body #section1 .subtitle {
+    font-size: 30px;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
+@media screen and (max-device-height: 700px) and (min-device-width: 640px) {
+  body #section1 .glitch-container .glitch, body #section1 .glitch-container .glow {
+    font-size: 45px;
+  }
+}
+@media screen and (max-device-height: 650px) and (max-device-width: 330px) {
+  body #section1 p {
+    margin-top: 20vh;
   }
 }
 
