@@ -9,7 +9,7 @@ window.onload = function circleProgress(){
 }
 
 // Scroll stop detector
-function scrollStop (callback, refresh = 1000) {
+function scrollStop (callback, refresh = 300) {
     if (!callback || typeof callback !== 'function') return;
     let isScrolling;
     window.addEventListener('scroll', function () {
@@ -19,9 +19,9 @@ function scrollStop (callback, refresh = 1000) {
 }
 
 // if user stopped scrolling
+let sections = document.querySelectorAll('.scrollable-section');
 scrollStop(function () {
     if (screen.width > 900){
-        let sections = document.querySelectorAll('.scrollable-section');
         let found = false;
         sections.forEach(function (section) {
             if (found === true) return
