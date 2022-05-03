@@ -37,15 +37,6 @@ body {
         transform: rotateX(0deg) skewX(0deg);
       }
     }
-    .text-section-title {
-      font-size: 40px;
-      font-weight: bold;
-      line-height: 32px;
-      letter-spacing: 8px;
-      top: -52px;
-      position: relative;
-      animation: glitch-2 3s 3.02s infinite;
-    }
     @keyframes glitch1 {
       0% {
         transform: none;
@@ -216,7 +207,9 @@ body {
       font-family: 'Real VHS Font';
       font-size: 40px;
       text-shadow: var(--shadow-x-distance) var(--shadow-y-distance) 0 var(--glitchy-blue),calc(var(--shadow-x-distance)*-1) calc(var(--shadow-y-distance)*-1) 0 var(--glitchy-red);
-      animation: glitch-2 3s 3.02s infinite;
+      h1 {
+        animation: glitch-2 3s 3.02s infinite;
+      }
       .contact-icons {
         a {
           i {
@@ -288,10 +281,10 @@ body {
       stroke-width: 0;
     }
     .circle-progress{
-      width: 250px;
-      height: 250px;
-      background-image: url("../assets/logo.png");
-      background-size: 200px;
+      width: 23vh;
+      height: 23vh;
+      background-image: url("../assets/logo.svg");
+      background-size: 20vh;
       background-repeat: no-repeat;
       background-position: center;
     }
@@ -300,6 +293,7 @@ body {
     }
     #logo-load {
       padding-top: 25px;
+      max-width: 20vh;
     }
     .glitch-container {
       position: absolute;
@@ -308,7 +302,8 @@ body {
       width: 100vw;
       padding-top: 20px;
       .glitch {
-        font-size: 90px;
+        font-size: 9vw;
+        white-space: nowrap;
         animation: glitch 4s 4s infinite;
       }
       .glitch::after {
@@ -430,9 +425,9 @@ body {
     position: absolute;
     width: 100%;
     height: 100vh;
-    background-position-x: center;
     background-size: cover;
     background-repeat: no-repeat;
+    background-position-x: center;
     filter: brightness(0.2);
   }
   .project-section-bg:before
@@ -442,9 +437,9 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-position-x: center;
     background-size: cover;
     background-repeat: no-repeat;
+    background-position-x: center;
     opacity: .5;
     mix-blend-mode: hard-light;
     animation: bg-glitch2 10s linear infinite;
@@ -489,9 +484,8 @@ body {
   {
     0%
     {
-      background-position: 0 0;
+      background-position: center 0;
       filter: hue-rotate(0deg);
-    ;
     }
     10%
     {
@@ -519,7 +513,7 @@ body {
     }
     70%
     {
-      background-position: 0 -20px;
+      background-position: center -20px;
     }
     80%
     {
@@ -530,7 +524,7 @@ body {
     }
     100%
     {
-      background-position: 0 0;
+      background-position: center 0;
       filter: hue-rotate(360deg);
     }
   }
@@ -538,7 +532,7 @@ body {
   {
     0%
     {
-      background-position: 0 0;
+      background-position: center 0;
       filter: hue-rotate(0deg);
     }
     10%
@@ -555,33 +549,30 @@ body {
     }
     25%
     {
-      background-position: 0 0;
+      background-position: center 0;
       filter: hue-rotate(0deg);
     }
     100%
     {
-      background-position: 0 0;
+      background-position: center 0;
       filter: hue-rotate(0deg);
     }
   }
-  @media screen and (max-device-width: 900px){
-    #section1 {
-      .glitch-container {
-        .glitch {
-          font-size: 85px;
-        }
-      }
-    }
+  @media screen and (max-width: 900px){
     .project-section {
       .project-section-content {
         .project-description {
-          width: 85%;
+          width: 95%;
           margin-top: 5vh;
         }
         .right-side {
           display: none;
         }
       }
+    }
+    .project-section:hover > .project-section-bg:before
+    {
+      animation: none;
     }
     section {
       .contact-content {
@@ -593,11 +584,11 @@ body {
       }
     }
   }
-  @media screen and (max-device-width: 650px){
-    #section1 {
-      .glitch-container {
-        .glitch {
-          font-size: 60px;
+  @media screen and (max-width: 650px){
+    .project-section {
+      .project-section-content {
+        .left-side {
+          display: none;
         }
       }
     }
@@ -611,24 +602,8 @@ body {
       }
     }
   }
-  @media screen and (max-device-width: 480px){
+  @media screen and (max-width: 480px){
     #section1 {
-      .progress {
-        img {
-          width: 150px;
-          height: 150px;
-        }
-      }
-      .circle-progress{
-        width: 200px;
-        height: 200px;
-        background-size: 150px;
-      }
-      .glitch-container {
-        .glitch {
-          font-size: 45px;
-        }
-      }
       .subtitle {
         font-size: 30px;
         padding-left: 10%;
@@ -636,61 +611,29 @@ body {
       }
     }
   }
-  @media screen and (max-device-width: 330px) {
+  @media screen and (max-width: 330px) {
     #section1 {
-      .progress {
-        img {
-          width: 100px;
-          height: 100px;
-        }
-      }
-      .circle-progress{
-        width: 120px;
-        height: 120px;
-        background-size: 100px;
-      }
-      .glitch-container {
-        .glitch {
-          font-size: 35px;
-        }
-      }
       .subtitle {
         font-size: 25px;
       }
     }
   }
-  @media screen and (max-device-height: 1100px) and (min-device-width: 900px) and (max-device-width: 1400px){
+  @media screen and (max-height: 1100px) and (min-width: 900px) and (max-width: 1400px){
     #section1 {
       p {
         margin-top: 40vh;
       }
     }
   }
-  @media screen and (max-device-height: 800px) and (min-device-width: 900px){
+  @media screen and (max-height: 800px) and (min-width: 900px){
     #section1 {
-      .glitch-container {
-        .glitch {
-          font-size: 80px;
-        }
-      }
       p {
         margin-top: 30vh;
       }
     }
   }
-  @media screen and (max-device-height: 700px){
+  @media screen and (max-height: 700px){
     #section1 {
-      .progress {
-        img {
-          width: 150px;
-          height: 150px;
-        }
-      }
-      .circle-progress{
-        width: 200px;
-        height: 200px;
-        background-size: 150px;
-      }
       .subtitle {
         font-size: 30px;
         padding-left: 10%;
@@ -706,14 +649,20 @@ body {
       }
     }
   }
-  @media screen and (max-device-height: 700px) and (max-device-width: 580px){
+  @media screen and (max-height: 700px) and (max-width: 580px){
     .project-section {
       .project-section-content {
         .project-description {
           .project-logo {
             max-width: 150px;
           }
+          .project-logo-large {
+            max-width: 300px;
+          }
           .project-name {
+            font-size: 30px;
+          }
+          .project-link {
             font-size: 30px;
           }
         }
@@ -722,20 +671,37 @@ body {
         }
       }
     }
-  }
-  @media screen and (max-device-height: 700px) and (min-device-width: 640px){
-    #section1 {
-      .glitch-container {
-        .glitch {
-          font-size: 45px;
-        }
+    section {
+      .contact-content {
+        padding-top: 10vh;
+        font-size: 30px;
       }
     }
   }
-  @media screen and (max-device-height: 650px) and (max-device-width: 330px) {
+  @media screen and (max-height: 650px) and (max-width: 330px) {
     #section1 {
       p {
         margin-top: 20vh;
+      }
+    }
+  }
+  @media screen and (max-height: 500px) {
+    .project-section {
+      .project-section-content {
+        .project-description {
+          .project-logo {
+            max-width: 120px;
+          }
+          .project-logo-large {
+            max-width: 250px;
+          }
+          .project-text {
+            font-size: 15px;
+          }
+          .project-link {
+            font-size: 20px;
+          }
+        }
       }
     }
   }
