@@ -442,28 +442,34 @@ body .project-section-bg:before {
 body .project-section:hover > .project-section-bg:before {
   animation: bg-glitch1 1s linear infinite;
 }
-body #section2 .project-section-bg {
+body .venom-section .project-section-bg {
   background-image: url("../assets/bg-venom.jpg");
 }
-body #section2 .project-section-bg:before {
+body .venom-section .project-section-bg:before {
   background-image: url("../assets/bg-venom.jpg");
 }
-body #section3 .project-section-bg {
+body .fm-section .project-section-bg {
+  background-image: url("../assets/bg-fm.jpg");
+}
+body .fm-section .project-section-bg:before {
+  background-image: url("../assets/bg-fm.jpg");
+}
+body .senshinomishi-section .project-section-bg {
   background-image: url("../assets/bg-senshinomishi.jpg");
 }
-body #section3 .project-section-bg:before {
+body .senshinomishi-section .project-section-bg:before {
   background-image: url("../assets/bg-senshinomishi.jpg");
 }
-body #section4 .project-section-bg {
+body .krypton-section .project-section-bg {
   background-image: url("https://groupe-krypton.com/wp-content/uploads/2021/11/pexels-pixabay-414807-scaled.jpg");
 }
-body #section4 .project-section-bg:before {
+body .krypton-section .project-section-bg:before {
   background-image: url("https://groupe-krypton.com/wp-content/uploads/2021/11/pexels-pixabay-414807-scaled.jpg");
 }
-body #section5 .project-section-bg {
+body .nihontsuki-section .project-section-bg {
   background-image: url("../assets/bg-nihontsuki.png");
 }
-body #section5 .project-section-bg:before {
+body .nihontsuki-section .project-section-bg:before {
   background-image: url("../assets/bg-nihontsuki.png");
 }
 @keyframes bg-glitch1 {
